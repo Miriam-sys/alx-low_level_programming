@@ -18,7 +18,8 @@ int main(void)
 		{
 			for (units = '0'; units <= '9'; units++)
 			{
-				if (!((units == tens) || (tens == hundreds) || (tens > units) || (hundreds > tens)))
+				if (!((units == tens) || (tens == hundreds) ||
+						       	(tens > units) || (hundreds > tens)))
 				{
 					putchar(hundreds);
 					putchar(tens);
