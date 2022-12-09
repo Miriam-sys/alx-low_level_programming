@@ -14,18 +14,20 @@ int main(void)
 
 	for (tens = '0'; tens <= '9'; tens++) /*Prints tens digit*/
 	{
-		if (!((ones == tens) || (tens > ones))) /*Gets rid of repetition*/
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			putchar(tens);
-			putchar(ones);
-			if (!(ones == '9' && tens == '8')) /*adds comma and space*/
+			if (!((ones == tens) || (tens > ones))) /*Gets rid of repetition*/
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(tens);
+				putchar(ones);
+				if (!(ones == '9' && tens == '8'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
 	putchar('\n');
-
-	return (0);
+	return(0);
 }
